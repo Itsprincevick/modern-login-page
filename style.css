@@ -214,6 +214,6 @@ Media Queries
     padding: 1rem;
   }
  .remember {
-   flex-direction: column;
+    font-size: calc(1rem - 0.2rem);
  }
 }
