@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: #c6c3c3;
+  --second-color: #ffffff;
+  --black-color: #000000;
+}
+
+body {
+  background-image: url("https://images.pexels.com/photos/355465/pexels-photo-355465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  -webkit-animation: slidein 100s;
+  animation: slidein 100s;
+
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    background-position: top;
+    background-size: 3000px;
+  }
+  to {
+    background-position: -100px 0px;
+    background-size: 2750px;
+  }
+}
+
+@keyframes slidein {
+  from {
+    background-position: top;
+    background-size: 3000px;
+  }
+  to {
+    background-position: -100px 0px;
+    background-size: 2750px;
+  }
+}
+
+/*
+==================
+Main Styling
+==================
+*/
+a {
+  text-decoration: none;
+  color: var(--second-color);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 28rem;
+  backdrop-filter: blur(5px);
+  border: 2px solid var(--primary-color);
+  border-radius: 1rem;
+  padding: 7.5em 2.5em 4em 2.5em;
+  color: var(--second-color);
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.container header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translatex(-50%);
+  font-weight: 500;
+  background-color: var(--primary-color);
+  width: 8.75rem;
+  height: 4.375rem;
+  padding: 0.3rem auto;
+  text-align: center;
+  border-radius: 0 0 1.25rem 1.25rem;
+}
+
+.container header h2 {
+  font-size: 1.875rem;
+  color: var(--black-color);
+  font-weight: 500;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(50% - 6.2rem);
+  height: 1.875rem;
+  width: 1.875rem;
+  border-top-right-radius: 50%;
+  box-shadow: 15px 0 0 0 var(--primary-color);
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: calc(50% - 6.2rem);
+  height: 1.875rem;
+  width: 1.875rem;
+  border-top-left-radius: 50%;
+  box-shadow: -15px 0 0 0 var(--primary-color);
+}
+
+.input-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 1.25rem 0;
+}
+
+.input-field {
+  width: 100%;
+  height: 3.438rem;
+  border-radius: 2.5rem;
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  outline: none;
+  color: var(--second-color);
+  padding: 0 1.5rem;
+  transition: border-color 0.2s;
+}
+#user {
+  margin-bottom: 1rem;
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: 0.3s;
+}
+.user {
+    top: 40%;
+}
+
+.input-field:focus ~ .label,
+.input-field:valid .label {
+  position: absolute;
+  top: 4px;
+  left: 20px;
+  font-size: 14px;
+  background-color: var(--primary-color);
+  border-radius: 30px;
+  color: var(--black-color);
+  padding: 0 10px;
+}
+.icon {
+  position: absolute;
+  top: 18px;
+  right: 25px;
+  font-size: 20px;
+}
+.remember {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  flex-grow: ;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 3.125rem;
+    background-color: var(--primary-color);
+    font-size: 1.125rem;
+    font-weight: 400;
+    border: none;
+    border-radius: 1.875rem;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 1.25rem;
+}
+input[type="submit"]:hover {
+  background-color: hsl(150, 50%, 98%);
+}
+
+footer {
+    text-align: center;
+    margin-top: 1.25rem;
+  }
+  footer a {
+    font-weight: 500;
+  }
+
+  /* 
+==================
+Media Queries
+==================
+*/
+
+@media only screen and (max-width:564px) {
+  body {
+    padding: 1rem;
+  }
+ .remember {
+   flex-direction: column;
+ }
+}
