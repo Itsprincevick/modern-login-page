@@ -218,10 +218,12 @@ Media Queries
     padding: 1.5rem;
   }
   .remember {
-    font-size: calc(1rem - 0.6rem);
+    font-size: calc(1rem - 0.3rem);
   }
   input[type="checkbox"] {
     align-items: center;
+    height: 1rem;
+    width: 1rem;
   }
   footer a {
     display: block;
