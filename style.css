@@ -223,8 +223,8 @@ Media Queries
   }
   input[type="checkbox"] {
     align-items: center;
-    height: 0.5rem;
-    width: 0.5rem;
+    height: 0.65rem;
+    width: 0.65rem;
   }
   footer a {
     display: block;
